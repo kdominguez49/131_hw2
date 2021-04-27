@@ -1,0 +1,26 @@
+<html>
+	<body>
+		<h1>Send messages</h1>
+		{% for a in posts %}
+			<p> {{ a.author }}:  {{a.message}} </p>
+		{%endfor%}
+		
+		<form action= "" method= "post" novalidate>
+			{{ form.hidden_tag() }}
+ 			
+		<p>	{{form.author.label}} </br>
+			{{form.author(size=32)}}
+		</p>
+
+		<p> 	
+			{{form.message.label}} </br>
+			{{form.message(size=100)}}
+		</p>
+
+		<p> {{form.submit() }} </p>
+		</form>
+	</body>
+</html>
+
+
+
